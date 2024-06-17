@@ -7,6 +7,11 @@
       "activeTab",
       "scripting"
     ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "0a0e3383-11f5-4cca-87be-355934bd216b"
+      }
+    },
     "host_permissions": [
       "*://*.linkedin.com/*"
     ],
