@@ -1,34 +1,36 @@
 {
-    "manifest_version": 3,
-    "name": "Take Away ai for Linkedin",
-    "version": "1.0",
-    "description": "Removes LinkedIn's AI-takeaway features for desktop users (PC/MacOS)",
-    "permissions": [
-      "activeTab",
-      "scripting"
-    ],
-    "browser_specific_settings": {
-      "gecko": {
-        "id": "0a0e3383-11f5-4cca-87be-355934bd216b"
-      }
-    },
-    "host_permissions": [
-      "*://*.linkedin.com/*"
-    ],
-    "background": {
-      "service_worker": ["background.js"]
-    },
-    "content_scripts": [
-      {
-        "matches": ["*://*.linkedin.com/*"],
-        "js": ["content_script.js"]
-      }
-    ],
-    "icons": {
-      "16": "icon16.png",
-      "32": "icon32.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
+  "manifest_version": 3,
+  "name": "Take Away ai for Linkedin",
+  "version": "1.0",
+  "description": "Removes LinkedIn's AI-takeaway features for desktop users (PC/MacOS)",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "*://*.linkedin.com/*"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/*"],
+      "js": ["content_script.js"]
     }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   }
-  
+}
+
+// for Firefox Add-on submission
+//   "browser_specific_settings": {
+//  "gecko": {
+//    "id": "{0a0e3383-11f5-4cca-87be-355934bd216b}"
+//  }
+// },
